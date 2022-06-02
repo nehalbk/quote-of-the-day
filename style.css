@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+    text-align: center;
+    font : white;
+    background-image: url("bg.jpg");
+  } 
+#a{
+      color:white; 
+      font-size: 250%;
+      font-family: 'Vivaldi', cursive;
+      /* border: 3px solid green;  */
+  }
+#b{
+    color:red;  
+    font-size: 150%;
+    /* border: 3px solid green; */
+}
+/* #main {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    
+  } */
+#main {
+    width: 75%  ;
+    height: 30%;
+    /* background-color: red; */
+    
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 3px solid black;
+    padding: 10px;
+    margin: auto;
+    background-color : rgba(0, 0, 0, 0.85);
+    border-radius: 5px;
+    box-shadow: 0 0 30px white;
+}

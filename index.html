@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Quote of the Day</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
+    <div id="main">
+    <p id="a"></p>
+    <p id="b"></p>
+    </div>
+
     <script type="text/javascript">
         fetch("https://type.fit/api/quotes")
         .then(function(response) {
             return response.json();
         })
         .then(function(data) {
-            console.log(data);
+            // console.log(data);
             
-            document.write(data[Math.floor(Math.random() * 1643)].text);
-            document.write("<br>");
-            document.write(data[Math.floor(Math.random() * 1643)].author);
+            quote=data[Math.floor(Math.random() * 1643)]
+            a=document.getElementById('a');
+            b=document.getElementById('b');
+
+            a.innerHTML = quote.text;
+            
+            
+            
+            if(quote.author){
+                b.innerHTML = quote.author;
+            }
+            else{
+                b.innerHTML = "Anonymous";
+            }
+           
         });
         
         </script>
